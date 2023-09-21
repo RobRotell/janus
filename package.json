@@ -1,37 +1,45 @@
 {
-  "name": "janus2",
-  "productName": "janus2",
-  "version": "1.0.0",
-  "description": "My Electron application description",
-  "main": ".webpack/main",
-  "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
-  },
-  "keywords": [],
-  "author": {
-    "name": "Rob",
-    "email": "dev@robrotell.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@electron-forge/cli": "^6.4.2",
-    "@electron-forge/maker-deb": "^6.4.2",
-    "@electron-forge/maker-rpm": "^6.4.2",
-    "@electron-forge/maker-squirrel": "^6.4.2",
-    "@electron-forge/maker-zip": "^6.4.2",
-    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
-    "@electron-forge/plugin-webpack": "^6.4.2",
-    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
-    "css-loader": "^6.8.1",
-    "electron": "26.2.1",
-    "node-loader": "^2.0.0",
-    "style-loader": "^3.3.3"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
-  }
+	"name": "janus",
+	"productName": "janus",
+	"version": "1.0.0",
+	"description": "My Electron application description",
+	"main": ".webpack/main",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "echo \"No linting configured\""
+	},
+	"keywords": [],
+	"author": {
+		"name": "Rob",
+		"email": "dev@robrotell.com"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@electron-forge/cli": "^6.4.2",
+		"@electron-forge/maker-deb": "^6.4.2",
+		"@electron-forge/maker-rpm": "^6.4.2",
+		"@electron-forge/maker-squirrel": "^6.4.2",
+		"@electron-forge/maker-zip": "^6.4.2",
+		"@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+		"@electron-forge/plugin-webpack": "^6.4.2",
+		"@vercel/webpack-asset-relocator-loader": "^1.7.3",
+		"css-loader": "^6.8.1",
+		"electron": "26.2.1",
+		"eslint": "^8.49.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.28.1",
+		"node-loader": "^2.0.0",
+		"sass": "^1.67.0",
+		"sass-loader": "^13.3.2",
+		"style-loader": "^3.3.3",
+		"webpack": "^5.88.2"
+	},
+	"dependencies": {
+		"alpinejs": "^3.13.0",
+		"electron-squirrel-startup": "^1.0.0",
+		"normalize.css": "^8.0.1"
+	}
 }

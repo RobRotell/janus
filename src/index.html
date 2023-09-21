@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
 
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<head>
+	<meta charset="UTF-8" />
+	<title>Janus</title>
+</head>
+
+<body>
+	<div class="logo">
+
+	</div>
+
+	<div 
+		x-data="janus"
+		class="app"
+	>
+		<div class="measure measure-mm">
+			<span class="measure__label">millimeters</span>
+			<input 
+				x-on:input="handleUpdateInputMillimeters"
+				x-model="inputs.millimeters"	
+				type="number"
+				class="measure__input" 
+			/>
+		</div>
+		<div class="measure measure-in">
+			<span class="measure__label">inches</span>
+			<input 
+				x-on:input="handleUpdateInputInches"
+				x-model="inputs.inches"
+				type="number" 
+				class="measure__input" 
+			/>
+		</div>
+	</div>
+</body>
+
 </html>
