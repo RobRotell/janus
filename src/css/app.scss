@@ -34,10 +34,15 @@ body {
 
 body {
 	display: flex;
+	flex-direction: column;
 	place-items: center;
 	place-content: center;
 	height: 100vh;
 	background-color: #220633;
+}
+
+.logo {
+	margin-bottom: 48px;
 }
 
 .app {
@@ -79,6 +84,10 @@ body {
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
   			-webkit-appearance: none;
+		}
+
+		&:focus-visible {
+			outline: #7113AB 1px solid;
 		}
 	}
 

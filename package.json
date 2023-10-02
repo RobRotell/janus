@@ -1,8 +1,8 @@
 {
 	"name": "janus",
-	"productName": "janus",
-	"version": "1.0.0",
-	"description": "My Electron application description",
+	"productName": "Janus",
+	"version": "0.0.2",
+	"description": "Small Electron app to convert measurements between millimeters and inches.",
 	"main": ".webpack/main",
 	"scripts": {
 		"start": "electron-forge start",
@@ -13,9 +13,14 @@
 	},
 	"keywords": [],
 	"author": {
-		"name": "Rob",
-		"email": "dev@robrotell.com"
+		"name": "Rob Rotell",
+		"email": "rob@robrotell.com"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RobRotell/janus.git"
+	},	
+	"homepage": "https://github.com/RobRotell/janus#readme",	
 	"license": "MIT",
 	"devDependencies": {
 		"@electron-forge/cli": "^6.4.2",
