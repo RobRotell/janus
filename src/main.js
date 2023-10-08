@@ -1,5 +1,6 @@
 import { app, BrowserWindow, shell, Menu } from 'electron'
 import electronSquirrelStartup from 'electron-squirrel-startup'
+import 'dotenv/config'
 
 
 // handle creating/removing shortcuts on Windows when installing/uninstalling.

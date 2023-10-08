@@ -28,14 +28,9 @@ export const Janus = {
 	 * @return {void}
 	 */
 	handleUpdateInputMillimeters( e ) {
-		let value = parseFloat( e.target.value )
+		const value = this.parseNumericValue( e.target.value )
 
-		if ( Number.isNaN( value ) || 0 > value ) {
-			value = 0
-		}
-
-		// AlpineJS's x-model only stores strings whereas we need numbers
-		this.inputs.millimeters = value
+		this.inputs.millimeters = value.toString()
 		this.inputs.inches = this.convertMillimetersToInches( this.inputs.millimeters )
 	},
 
@@ -47,14 +42,9 @@ export const Janus = {
 	 * @return {void}
 	 */
 	handleUpdateInputInches( e ) {
-		let value = parseFloat( e.target.value )
+		const value = this.parseNumericValue( e.target.value )
 
-		if ( Number.isNaN( value ) || 0 > value ) {
-			value = 0
-		}
-
-		// AlpineJS's x-model only stores strings whereas we need numbers
-		this.inputs.inches = value
+		this.inputs.inches = value.toString()
 		this.inputs.millimeters = this.convertInchesToMillimeters( this.inputs.inches )
 	},
 
@@ -66,11 +56,9 @@ export const Janus = {
 	 * @return {number}
 	 */
 	convertMillimetersToInches( value ) {
-		if ( Number.isNaN( value ) ) {
-			return 0
-		}
+		const parsedValue = this.parseNumericValue( value )
 
-		return +( value / 25.4 ).toFixed( 2 )
+		return +( parsedValue / 25.4 ).toFixed( 2 )
 	},
 
 
@@ -81,10 +69,25 @@ export const Janus = {
 	 * @return {number}
 	 */
 	convertInchesToMillimeters( value ) {
-		if ( Number.isNaN( value ) ) {
-			return 0
+		const parsedValue = this.parseNumericValue( value )
+
+		return +( parsedValue * 25.4 ).toFixed( 2 )
+	},
+
+
+	/**
+	 * Convert value to number and validate
+	 *
+	 * @param {mixed} value
+	 * @return {number}
+	 */
+	parseNumericValue( value ) {
+		let parsedValue = parseFloat( value )
+
+		if ( Number.isNaN( parsedValue ) || 0 > parsedValue ) {
+			parsedValue = 0
 		}
 
-		return +( value * 25.4 ).toFixed( 2 )
+		return parsedValue
 	},
 }

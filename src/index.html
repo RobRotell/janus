@@ -29,6 +29,8 @@
 				x-on:input="handleUpdateInputMillimeters"
 				x-model="inputs.millimeters"	
 				type="number"
+				step="0.01"
+				min="0"
 				class="measure__input" 
 			/>
 		</div>
@@ -38,6 +40,8 @@
 				x-on:input="handleUpdateInputInches"
 				x-model="inputs.inches"
 				type="number" 
+				step="0.01"
+				min="0"
 				class="measure__input" 
 			/>
 		</div>

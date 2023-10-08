@@ -11,20 +11,22 @@ module.exports = {
 		},
 		{
 			name: '@electron-forge/maker-zip',
-			platforms: ['darwin'],
+			platforms: [
+				'darwin',
+			],
 		},
 		{
 			name: '@electron-forge/maker-deb',
 			config: {
 				options: {
 					icon: './src/icons/icon.png',
-				}
+				},
 			},
 		},
-		{
-			name: '@electron-forge/maker-rpm',
-			config: {},
-		},
+		// {
+		// 	name: '@electron-forge/maker-rpm',
+		// 	config: {},
+		// },
 	],
 	plugins: [
 		{
@@ -51,4 +53,17 @@ module.exports = {
 			},
 		},
 	],
-};
+	publishers: [
+		{
+			name: '@electron-forge/publisher-github',
+			config: {
+				repository: {
+					owner: 'RobRotell',
+					name: 'janus',
+				},
+				prerelease: false,
+				draft: true,
+			},
+		},
+	],
+}
